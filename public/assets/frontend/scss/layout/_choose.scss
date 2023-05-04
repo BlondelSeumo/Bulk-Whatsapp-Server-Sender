@@ -1,0 +1,16 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. choose CSS START
+/*----------------------------------------*/
+
+.tp-choose{
+    &__thumb-sm{
+        margin: 0px 10px;
+    }
+    &__subtitle{
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,123 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  19. team CSS START
+/*----------------------------------------*/
+
+.tp-team{
+    &__ml-mr{
+        margin-left: 185px;
+        margin-right: 185px;
+        @media #{$xxxl}{
+            margin: 0px 130px;
+        }
+        @media #{$xxl}{
+            margin: 0px 50px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            margin: 0px 0px;
+        }
+        &.theme-bg-3{
+            border-radius: 20px;
+        }
+    }
+    &__section-box{
+        margin-bottom: 60px;
+        padding: 0px 30px;
+        @media #{$md}{
+            flex-wrap: wrap;
+            & .tp-section-title-md{
+                margin-bottom: 40px;
+            }
+        }
+        @media #{$xs}{
+            flex-wrap: wrap;
+            padding: 0;
+            & .tp-section-title-md{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__grey-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 170px;
+        z-index: -1;
+    }
+    &__btn{
+        @media #{$xs}{
+            & .tp-btn-sky-sm{
+                margin-left: 0;
+            }
+        }
+        @media #{$sm}{
+            & .tp-btn-sky-sm{
+                margin-left: 15px;
+            }
+        }
+    }
+    &__img{
+        margin-bottom: 35px;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 22px;
+        color: var(--tp-common-white);
+        @media #{$lg}{
+            font-size: 18px;
+        }
+        & a{
+            background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+            display: inline;
+            background-size: 0% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.3s linear;
+            &:hover{
+                background-size: 0% 1px, 100% 1px;
+            }
+        }         
+    }
+    &__content{
+        padding-bottom: 20px;
+        & span{
+            font-weight: 400;
+            font-size: 16px;          
+            color: #A4B4C3;            
+        }
+    }
+    &__inner{
+       & .tp-team__title{
+          color: var(--tp-theme-1);
+          &:hover{
+            color: var(--tp-common-sky);
+          }
+       } 
+       & .tp-team__social{
+        & a{
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--tp-theme-1);
+            margin: 0px 15px;
+            transition: .3s;
+            &:hover{
+                color: var(--tp-common-sky);
+            }
+        }
+       }
+    }
+    &__social{
+        & a{
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--tp-common-white);
+            margin: 0px 15px;
+            transition: .3s;
+            &:hover{
+                color: var(--tp-common-sky);
+            }
+        }
+    }
+}

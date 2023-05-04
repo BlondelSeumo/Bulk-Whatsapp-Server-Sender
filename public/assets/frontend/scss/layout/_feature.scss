@@ -1,0 +1,64 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  06. feature CSS START
+/*----------------------------------------*/
+
+
+.tp-feature{
+    &__item{
+        padding: 40px 55px;
+        border-radius: 10px;
+        border: 1px dashed;
+        border-image-source: linear-gradient(to bottom, #EF8EFF, #51CFF9);
+        border-image-slice: 1;
+        display: inline-block;
+        overflow: hidden;
+        min-height: 332px;
+        @media #{$lg}{
+            padding: 30px;
+        }
+        @media #{$md}{
+            padding: 35px;
+        }
+        @media #{$xs}{
+            padding: 30px 20px;
+        }
+        &:hover{
+            & .tp-feature__icon{
+                animation: icon-bounce 0.8s 1;
+            }
+            & .tp-feature__link{
+                & svg{
+                    transition: .3s;
+                    color: var(--tp-common-sky);
+                    animation: tfLeftToRight 0.8s forwards infinite;
+                }
+            }
+        }
+    }
+    &__icon{
+        position: relative;
+        z-index: 5;
+        margin-bottom: 30px;
+        & img{
+            width: 88px;
+            height: 88px;
+        }
+    }
+    &__content{
+        z-index: 5;
+        position: relative;
+        & p{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+    }
+    &__title-sm{
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+}

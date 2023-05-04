@@ -1,0 +1,163 @@
+@use '../utils' as *;
+
+/*--- preloader ---*/
+
+.dark #preloader {
+
+    background-color: var(--tp-theme-1);
+  
+  }
+  
+  
+  
+  #preloader {
+  
+    position: fixed;
+  
+    top: 0;
+  
+    left: 0;
+  
+    right: 0;
+  
+    bottom: 0;
+  
+    background-color: #f7f7f7;
+  
+    z-index: 999999;
+  
+  }
+  
+  
+  
+  .preloader {
+  
+    width: 50px;
+  
+    height: 50px;
+  
+    display: inline-block;
+  
+    padding: 0px;
+  
+    text-align: left;
+  
+    box-sizing: border-box;
+  
+    position: absolute;
+  
+    top: 50%;
+  
+    left: 50%;
+  
+    margin-left: -25px;
+  
+    margin-top: -25px;
+  
+  }
+  
+  
+  
+  .preloader span {
+  
+    position: absolute;
+  
+    display: inline-block;
+  
+    width: 50px;
+  
+    height: 50px;
+  
+    border-radius: 100%;
+  
+    background: var(--tp-theme-1);
+  
+    -webkit-animation: preloader 1.3s linear infinite;
+  
+    animation: preloader 1.3s linear infinite;
+  
+  }
+  
+  
+  
+  .preloader span:last-child {
+  
+    animation-delay: -0.9s;
+  
+    -webkit-animation-delay: -0.9s;
+  
+  }
+  
+  
+  
+  @keyframes preloader {
+  
+    0% {
+  
+      transform: scale(0, 0);
+  
+      opacity: 0.5;
+  
+    }
+  
+  
+  
+    100% {
+  
+      transform: scale(1, 1);
+  
+      opacity: 0;
+  
+    }
+  
+  }
+  
+  
+  
+  @-webkit-keyframes preloader {
+  
+    0% {
+  
+      -webkit-transform: scale(0, 0);
+  
+      opacity: 0.5;
+  
+    }
+  
+  
+  
+    100% {
+  
+      -webkit-transform: scale(1, 1);
+  
+      opacity: 0;
+  
+    }
+  
+  }
+  
+  
+  
+  /*--- end of preloader ---*/
+
+
+  .scroll-top {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: -10%;
+    right: 50px;
+    font-size: 16px;
+    border-radius: 6px;
+    z-index: 999;
+    color: var(--tp-common-white);
+    text-align: center;
+    cursor: pointer;
+    background: var(--tp-theme-2);
+    transition: 1s ease;
+    border: none;
+  }
+  .scroll-top.open {
+    bottom: 30px;
+  }

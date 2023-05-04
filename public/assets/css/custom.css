@@ -1,0 +1,372 @@
+.none{
+	display: none;
+}
+.show{
+	display: block;
+}
+.is-invalid {
+    color: red;
+    font-weight: normal;
+}
+
+.bg-background {
+    background: #f8f9fe;
+}
+
+.text-base {
+    color: #8898aa;
+}
+
+.white-bg {
+    color: #FFF;
+}
+
+.font-14 {
+    font-size: .75rem;
+}
+.h-200{
+    min-height: 200px !important;
+}
+.h-100{
+    min-height: 100px !important;
+}
+.h-150{
+    min-height: 150px !important;
+}
+.custom-btn {
+    color: #2642dd;
+    font-size: .875rem;
+    position: relative;
+    transition: all .3s ease;
+    letter-spacing: .025em;
+    text-transform: none;
+    will-change: transform;
+    border-color: transparent;
+    background-color: rgba(55, 125, 255, 0.1);
+    border: none;
+    outline: none;
+}
+
+.custom-btn:hover {
+    border: none;
+    outline: none;
+    color: #fff;
+    border-color: #1937e4;
+    background-color: #1937e4;
+}
+
+.subscriber-table input.form-control {
+    height: 35px;
+    border: 1px solid #ebebeb;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+}
+
+.latter-space-0 {
+    letter-spacing: 0px;
+}
+
+.link{
+    cursor: pointer;
+}
+
+.custom-control.image-checkbox {
+    position: relative;
+    padding-left: 0;
+}
+
+.custom-control-label{
+    height: 20px;
+}
+
+.custom-control.image-checkbox .custom-control-input:checked ~ .custom-control-label:after, .custom-control.image-checkbox .custom-control-input:checked ~ .custom-control-label:before {
+    opacity: 1;
+}
+
+.custom-control.image-checkbox label {
+    cursor: pointer;
+}
+
+.custom-control.image-checkbox label:before {
+    border-color: #007bff;
+    background-color: #007bff;
+}
+
+.custom-control.image-checkbox label:after, .custom-control.image-checkbox label:before {
+    transition: opacity .3s ease;
+    opacity: 0;
+    left: .25rem;
+}
+
+.custom-control.image-checkbox label:focus, .custom-control.image-checkbox label:hover {
+    opacity: .8;
+}
+
+.custom-control.image-checkbox label img {
+    border-radius: 2.5px;
+}
+
+.form-group-image-checkbox.is-invalid label {
+    color: #dc3545;
+}
+
+.form-group-image-checkbox.is-invalid .invalid-feedback {
+    display: block;
+}
+
+.image-checkbox .custom-control-label {
+    height: 4rem !important;
+}
+
+.dz-message {
+    height: 200px;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+a.clipboard-button,
+p.clipboard-button,
+span.clipboard-button
+{
+    cursor: pointer;
+    color: #007bff;
+}
+
+code[class*=language-], pre[class*=language-] {
+    font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.375;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    color: #5e6687;
+    border-radius: .25rem;
+    background: #f5f7ff;
+    direction: ltr;
+    -ms-hyphens: none
+}
+
+code[class*=language-] ::selection, code[class*=language-]::selection, pre[class*=language-] ::selection, pre[class*=language-]::selection {
+    background: #dfe2f1;
+    text-shadow: none
+}
+
+pre[class*=language-] {
+    overflow: auto;
+    margin: 0;
+    padding: 1.25rem
+}
+
+:not(pre) > code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em
+}
+
+.nav-pills .nav-link {
+    font-size: .875rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: all .15s ease;
+    color: #5e72e4;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #5e72e4;
+}
+
+.transfers-list {
+    position: relative;
+}
+
+.transfers-list .dropdown .dropdown-menu {
+    transform: translate3d(-160px, 28px, 0px) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.note-editable.card-block {
+    height: 190px !important;
+}
+
+.product-payment .nav-item {
+    width: 25%;
+}
+
+.product-payment .nav-link {
+    height: 50px;
+    line-height: 25px;
+}
+
+.deposit-payment .nav-item {
+    width: 25%;
+}
+
+.deposit-payment .nav-item .nav-link {
+    width: 115px;
+}
+
+.deposit-payment .nav-link {
+    height: 50px;
+    line-height: 25px;
+}
+
+.site-btn {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: rgb(4, 12, 97);
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 14px 30px;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    border-radius: 30px;
+}
+
+.site-btn:hover {
+    background-color: #6658ea;
+}
+
+.qr-code{
+    width:100px;
+    height:100px;
+    margin-top:15px;
+}
+
+.search-table button {
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.card .card-header {
+    border-bottom-color: #f9f9f9;
+    line-height: 30px;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.card .card-header h4 + .card-header-action, .card .card-header h4 + .card-header-form {
+    margin-left: auto;
+}
+
+.chartjs-render-monitor {
+    height: 350px !important;
+}
+
+.summernote-css .note-toolbar.card-header {
+    display: inline-block;
+}
+
+.inr {
+    font-family: 'Bitter', serif;
+}
+
+/* CHART CSS */
+
+.chartjs-size-monitor {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.chartjs-size-monitor-expand {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    pointer-events:none;
+    visibility:hidden;z-index:-1;
+}
+
+.chart-inner-div {
+    position:absolute;
+    width:1000000px;
+    height:1000000px;
+    left:0;
+    top:0
+}
+
+.chartjs-size-monitor-shrink {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    pointer-events:none;
+    visibility:hidden;
+    z-index:-1;
+}
+
+.chart-inner-div-2 {
+    position:absolute;
+    width:200%;
+    height:200%;
+    left:0;
+    top:0
+}
+
+.chartjs-render-monitor {
+    display: block;
+    height: 303px;
+    width: 576px;
+}
+
+
+.card-primary{
+    border-top: 2px solid #6777ef;
+}
+.card-header-form {
+    margin-left: auto;
+}
+.position-relative{
+    position: relative;
+}
+.contact-list{
+    position: relative;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.wa-bg-img{
+    height: 20%;
+    width: 50%;
+}
+
+.wa-content-area{
+    position: absolute; 
+    bottom: 0px;
+}
+.w-70-per{
+    width: 70%;
+}
+
+.card-bottom-min-25{
+    margin-bottom: -25px !important;
+}

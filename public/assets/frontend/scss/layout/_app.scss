@@ -1,0 +1,142 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. app CSS START
+/*----------------------------------------*/
+
+.tp-app{
+    &__wrapper{
+        padding-left: 50px;
+        padding-right: 100px;
+        @media #{$xl}{
+            padding-left: 35px;
+            padding-right: 0px;
+        }
+        @media #{$lg}{
+            padding-left: 35px;
+            padding-right: 0px;
+        }
+        @media #{$md,$xs}{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    &__thumb{
+        padding-left: 35px;
+        animation: tpupdown 1s infinite alternate;
+        @media #{$xl,$lg}{
+            padding-left: 0;
+        }
+        @media #{$md,$xs}{
+            padding-left: 0;
+            width: 100%;
+            margin-bottom: 70px;
+        }
+        & img{
+            @media #{$md}{
+                width: 100%;
+            }
+        }
+    }
+    &__content{
+        & p{
+            color: var(--tp-common-white-2);
+            padding-bottom: 55px;
+            padding-right: 40px;
+            @media #{$xs}{
+                padding-right: 0;
+            }
+        }
+    }
+    &__title-sm{
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    &__thumb-sm{
+        &-1{
+            margin-right: 20px;
+        }
+    }
+}
+
+.tp-integration{
+    &__bg {
+        position: relative;
+        z-index: 99;
+    }
+    &__title-box{
+        & .tp-section-title{
+            margin-bottom: 40px;
+        }
+    }
+    &__icon{
+        & span{
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            text-align: center;
+            background-color: var(--tp-common-white);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0px 21px 40px rgba(31, 60, 80, 0.05);
+        }
+        &.int-icon-1{
+            position: absolute;
+            top: 40%;
+            left: 21%;
+        }
+        &.int-icon-2{
+            position: absolute;
+            top: 23%;
+            left: 31%;
+        }
+        &.int-icon-3{
+            position: absolute;
+            top: 60%;
+            left: 31%;
+        }
+        &.int-icon-4{
+            position: absolute;
+            top: 41%;
+            left: 46%;
+        }
+        &.int-icon-5{
+            position: absolute;
+            top: 41%;
+            right: 22%;
+        }
+        &.int-icon-6{
+            position: absolute;
+            top: 54%;
+            right: 33%;
+        }
+        &.int-icon-7{
+            position: absolute;
+            top: 27%;
+            right: 33%;
+        }
+    }
+}
+.int-icon-bottom{
+    & span{
+        height: 100px;
+        width: 100px;
+        line-height: 80px;
+        text-align: center;
+        background-color: var(--tp-common-white);
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0px 21px 40px rgba(31, 60, 80, 0.05);
+    }
+}
+.int-icon-8{
+    position: absolute;
+    bottom: 16%;
+    left: 10%;
+}
+.int-icon-9{
+    position: absolute;
+    bottom: 36%;
+    right: 6%;
+}

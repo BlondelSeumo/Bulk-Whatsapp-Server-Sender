@@ -1,0 +1,25 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  22. 404 CSS START
+/*----------------------------------------*/
+
+.height-404{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper-404{
+    height: 100vh;
+}
+.tp-404-content{
+    & h4{
+        font-size: 40px;
+        font-weight: 600;
+        font-size: 30px;    
+    }
+}
+.header-grey-bg{
+    background-color: #F7F7F7;
+}

@@ -1,0 +1,265 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  07. service CSS START
+/*----------------------------------------*/
+
+
+.tp-service{
+    &__space{
+        margin-right: 185px;
+        margin-left: 185px;
+        @media #{$xxxl}{
+            margin: 0px 130px;
+        }
+        @media #{$xxl}{
+            margin: 0px 50px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            margin: 0px 0px;
+        }
+        &.theme-bg-3{
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    &__section-wrapper {
+        margin-bottom: 60px;
+        @media #{$xs}{
+            flex-wrap: wrap;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 1.2;
+        color: var(--tp-common-white);
+        @media #{$md}{
+            font-size: 35px;
+        }
+        @media #{$xs}{
+            font-size: 35px;
+            margin-bottom: 50px;
+            & br{
+                display: none;
+            }
+        }
+    }
+    &__play-btn{
+        margin-right: 100px;
+        @media #{$md}{
+            margin-right: 30px;
+        }
+        @media #{$xs}{
+            margin-right: 0px;
+            margin-left: 30px;
+        }
+        & a{
+            height: 95px;
+            width: 95px;
+            text-align: center;
+            line-height: 95px;
+            color: var(--tp-common-white);
+            background-color: var(--tp-common-pink);
+            display: inline-block;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+    }
+    &__icon{
+        margin-bottom: 45px;
+        & img{
+            width: 70px;
+            height: 70px;
+        }
+    }
+    &__item{
+        background-color: #1859FF;
+        padding: 80px 50px;
+        border-radius: 10px;
+        max-height: 440px;
+        @media #{$lg}{
+            padding: 50px 30px;
+        }
+        @media #{$xs}{
+            padding: 40px 24px;
+        }
+        &:hover{
+            & .tp-service__icon{
+              & img{
+                  animation: icon-bounce 0.8s 1;
+              }
+            } 
+            & .tp-service__link{
+                & a{
+                    & svg{
+                        color: var(--tp-common-pink);
+                    }
+                }
+            }
+          }
+    }
+    &__inner-item{
+        background-color: transparent;
+        border: 1px solid var(--tp-grey-2);
+    }
+    &__title-sm{
+        color: var(--tp-common-white);
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 35px;
+        display: inline-block;
+        transition: .3s;
+        &:hover{
+            color: var(--tp-common-pink);
+        }
+    }
+    &__content{
+        & p{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            color: var(--tp-common-white);
+            padding-bottom: 25px;
+        }
+    }
+    &__link{
+        & a{
+            & svg{
+                color: var(--tp-common-white);
+                transition: .3s;
+            }
+        }
+    }
+    &__title-box{
+        @media #{$md,$xs}{
+            margin-left: 0;
+        }  
+    }
+    &__slider-active{
+        margin: 0px -15px;
+        & button{
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: var(--tp-common-white);
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 21px 89px rgba(146, 168, 201, 0.24);
+            transition: .3s;
+            &:hover{
+                background-color: var(--tp-common-pink);
+                color: var(--tp-common-white);
+            }
+        }
+        & .slick-slide{
+            padding: 0px 15px;
+        }
+        & .slick-prev {
+            position: absolute;
+            left: -17%;
+            top: 50%;
+            transform: translateY(-50%);
+            @media #{$xxxl}{
+                left: -9%;
+            }
+            @media #{$xxl}{
+                left: -7%;
+            }
+        }
+        & .slick-next {
+            position: absolute;
+            right: -17%;
+            top: 50%;
+            transform: translateY(-50%);
+            @media #{$xxxl}{
+                right: -9%;
+            }
+            @media #{$xxl}{
+                right: -7%;
+            }
+        }
+    }
+}
+
+.service-inner{
+    &.grey-bg{
+        border-radius: 20px 20px 0  0;
+    }
+    & .tp-service__title{
+        color: var(--tp-theme-1);
+    }
+    & .tp-service__item{
+        background-color: var(--tp-common-white);
+    }
+    & .tp-service__title-sm{
+        color: var(--tp-theme-1);
+        &:hover{
+            color: var(--tp-common-pink);
+        }
+    }
+    & .tp-service__content{
+        & p{
+            color: #62637D;
+        }
+    }
+    & .tp-service__link{
+        & a{
+            & svg{
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+}
+.service-inner{
+    &__top-thumb{
+        margin-bottom: 20px;
+        & img{
+            border-radius: 5px;
+        }
+    }
+    &__list{
+        & ul{
+            & li{
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 10px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 30px;   
+                color: #62637D;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & i{
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    color: var(--tp-theme-2);
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.1;       
+        letter-spacing: -0.02em;
+        padding-bottom: 15px;
+        @media #{$xs}{
+            font-size: 30px;
+        }  
+    }
+    &__process-box{
+        & p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;          
+            color: #62637D;  
+            padding-right: 30px;
+            @media #{$lg,$md,$xs}{
+                padding-right: 0;
+            }         
+        }
+    }
+}

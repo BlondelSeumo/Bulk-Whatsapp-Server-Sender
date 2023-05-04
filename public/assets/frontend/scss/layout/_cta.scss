@@ -1,0 +1,109 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  13. cta CSS START
+/*----------------------------------------*/
+
+.tp-cta{
+    &__bg{
+        padding: 80px;
+        border-radius: 8px;
+        @media #{$xs}{
+            padding: 30px;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        margin-bottom: 0;
+        @media #{$md} {
+            font-size: 35px;
+        }
+        @media #{$xs} {
+            font-size: 25px;
+        }
+    }
+    &__thumb{
+        position: absolute;
+        top: -35%;
+        right: 10%;
+        @media #{$lg}{
+            right: 1%;
+        }
+        @media #{$md}{
+            position: static;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        @media #{$xs}{
+            position: static;
+            top: 0;
+            right: 0;
+            margin-bottom: 50px;
+        }
+        @media #{$sm}{
+            text-align: center;
+        }
+    }
+    &__thumb-2{
+        position: absolute;
+        top: -29%;
+        left: 4%;
+        animation: tpleftright 1s infinite alternate;
+    }
+    &__item{
+        padding: 100px 30px;
+        @media #{$xs}{
+            padding: 70px 20px;
+        }
+    }
+    &__wrapper-2{
+        border-radius: 20px;
+    }
+    &__shape-1{
+        position: absolute;
+        top: 14%;
+        left: 18%;
+    }
+    &__shape-2{
+        position: absolute;
+        top: 14%;
+        right: 8%;
+        animation: tpleftright 1s infinite alternate;
+        @media #{$xs}{
+            top: 8%;
+        }
+    }
+    &__shape-3{
+        position: absolute;
+        bottom: 14%;
+        left: 8%;
+        animation: tpupdown 1s infinite alternate;
+    }
+    &__shape-4{
+        position: absolute;
+        bottom: 18%;
+        left: 18%;
+    }
+    &__shape-5{
+        position: absolute;
+        bottom: 14%;
+        right: 8%;
+    }
+    &__grey-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    &__white-bg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+}

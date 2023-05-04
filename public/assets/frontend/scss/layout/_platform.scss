@@ -1,0 +1,64 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  16. platform CSS START
+/*----------------------------------------*/
+
+.tp-platform{
+    &__content{
+        @media #{$lg}{
+            padding-left: 0;
+        }
+        @media #{$xs}{
+            padding-left: 0;
+        }
+        & p{
+            @media #{$xs}{
+                font-size: 17px;
+                & br{
+                    display: none;
+                }
+            }  
+        }
+    }
+    &__thumb{
+        @media #{$md}{
+            width: 100%;
+            margin-bottom: 70px;
+            display: inline-block;
+         }
+         @media #{$xs}{
+            margin-bottom: 70px;
+         }
+        & img{
+            box-shadow: 12px 50px 81px rgba(25, 46, 78, 0.14);
+            margin: 0px 80px;
+            @media #{$lg}{
+               margin: 0;
+               width: 100%;
+            }
+            @media #{$md}{
+               margin: 0;
+               width: 100%;
+            }
+            @media #{$xs}{
+               margin: 0;
+            }
+            @media #{$sm}{
+               width: 100%;
+            }
+        }
+    }
+    &__shape-1{
+        position: absolute;
+        top: -15%;
+        right: 0;
+        animation: tpswing 1s ease-in-out 1s forwards infinite alternate;
+    }
+    &__shape-2{
+        position: absolute;
+        bottom: -15%;
+        left: 0;
+        animation: tpleftright 1s infinite alternate;
+    }
+}

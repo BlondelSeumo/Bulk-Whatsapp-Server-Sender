@@ -1,0 +1,117 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  09. faq CSS START
+/*----------------------------------------*/
+
+.tp-faq{
+    &__wrapper-box{
+        padding-right: 25px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        @media #{$xs}{
+            padding-right: 0;
+            padding-bottom: 60px;
+        }
+    }
+    &__title-box{
+        & p{
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--tp-theme-1);
+            padding-bottom: 20px; 
+            @media #{$xs}{
+                & br{
+                    display: none;
+                }
+            } 
+        }
+        & .tp-section-title{
+            padding-bottom: 20px;
+        }
+    }
+    &__thumb{
+        width: 510px;
+        transform: translateX(120px);
+        @media #{$xl}{
+            transform: translateX(75px);
+        }
+        @media #{$lg}{
+            transform: translateX(0px);
+        }
+        @media #{$xs}{
+            transform: translateX(0px);
+            width: 100%;
+        }
+        & img{
+            @media #{$lg,$xs}{
+                max-width: 100%;
+            }
+        }
+    }
+    &__right-side{
+        background-color: var(--tp-grey-2);
+        padding: 70px 40px;
+        border-radius: 10px;
+        margin-left: 30px;
+        @media #{$md}{
+            margin-left: 0;
+        }
+        @media #{$xs}{
+            padding: 20px;
+            margin-left: 0px;
+        }
+    }
+    &__icon{
+        padding-bottom: 40px;
+        & a{
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            background-color: var(--tp-common-white);
+            text-align: center;
+            display: inline-block;
+        }
+    }
+    &__faq-sm-title{
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        padding-bottom: 15px;
+    }
+    &__content{
+        & p{
+            padding: 0px 25px;
+            padding-bottom: 75px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.8;           
+            text-align: center;
+            letter-spacing: -0.02em;           
+            color: #62637D;
+            @media #{$xs}{
+                padding: 0;
+            }
+            
+        }
+        & a{
+            width: 100%;
+            display: inline-block;
+            padding: 30px 30px;
+            background-color: var(--tp-common-sky);
+            font-weight: 600;
+            font-size: 16px;        
+            color: #FFFFFF;
+            border-radius: 10px;
+            transition: .3s;
+            &:hover{
+                background-color: var(--tp-theme-2);
+            }
+            @media #{$xs}{
+                padding: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  11. counter CSS START
+/*----------------------------------------*/
+
+.tp-counter{
+    &__area{
+        position: relative;
+    }
+    &__theme-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: var(--tp-theme-1);
+        z-index: -1;
+    }
+    &__grey-bg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: var(--tp-grey-2);
+        z-index: -1;
+    }
+    &__content{
+        & span{
+            display: block;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            @media #{$xs}{
+                font-size: 35px;
+            }
+            color: var(--tp-theme-1);
+            & i{
+                font-style: normal;
+            }
+        }
+        & p{
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            color: #646580;
+            margin-bottom: 0;
+            @media #{$xs}{
+                font-size: 15px;
+            }
+        }
+    }
+    &__icon{
+        margin-right: 30px;
+        flex: 0 0 auto;
+        @media #{$lg}{
+            margin-right: 18px;
+        }
+        @media #{$xs}{
+            margin-right: 15px;
+        }
+        & img{
+            width: 88px;
+            height: 88px;
+        }
+    }
+    &__item {
+        background-color: var(--tp-grey-2);
+        padding: 50px;
+        border: 1px solid #D3E5F1;
+        border-radius: 16px;
+        transition: .3s;
+        @media #{$lg}{
+            padding: 24px;
+        }
+        @media #{$md}{
+            margin-bottom: 20px;
+        }
+        @media #{$xs}{
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        &:hover{
+            background-color: var(--tp-common-white);
+            border-color: var(--tp-common-white);
+            box-shadow: 0px 23px 41px rgba(26, 62, 85, 0.07);
+        }
+    }
+}
+.tp-counter-2{
+    &__space{
+        margin: 0px 185px;
+        @media #{$xxxl}{
+            margin: 0px 130px;
+        }
+        @media #{$xxl}{
+            margin: 0px 50px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            margin: 0px 0px;
+        }
+        &.theme-bg-3{
+            border-radius: 0 0 20px 20px;
+        }
+    }
+    &__wrapper{
+        border-top: 2px solid #306AFF;
+    }
+    &__icon{
+        margin-right: 35px;
+        @media #{$lg}{
+            margin-right: 15px;
+        }
+    }
+    &__content{
+        & h4{
+            font-weight: 600;
+            font-size: 40px;
+            color: var(--tp-common-white);
+            & span{
+                font-weight: 600;
+                font-size: 40px;
+                color: var(--tp-common-white); 
+            }
+        }
+        & span{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            color: var(--tp-common-white);
+            @media #{$lg}{
+                font-size: 14px;
+            }
+        }
+    }
+}
+.counter-inner{
+    &.grey-bg{
+        border-radius: 0px 0px 20px 20px;
+        margin-bottom: 130px;
+    }
+    & .tp-counter-2__content{
+        & h4{
+            color: var(--tp-theme-1);
+            & span{
+                color: var(--tp-theme-1);
+            }
+        }
+        & span{
+            color: #62637D;
+        }
+    }
+    & .tp-counter-2__wrapper{
+        border-top: 2px solid rgba(20, 23, 116, 0.1);
+    }
+}

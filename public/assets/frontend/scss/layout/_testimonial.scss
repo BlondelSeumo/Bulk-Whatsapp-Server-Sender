@@ -1,0 +1,265 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  14. testimonial CSS START
+/*----------------------------------------*/
+
+.tp-testimonial{
+    &__wrapper{
+        padding-left: 40px;
+        @media #{$lg}{
+            padding-left: 20px;
+        }
+        @media #{$xs}{
+            padding-left: 0px;
+        }
+    }
+    &__thumb{
+        animation: tpupdown 1s infinite alternate;
+        @media #{$md,$xs}{
+            width: 100%;
+            margin-bottom: 70px;
+        } 
+        & img{
+            @media #{$md,$xs}{
+                width: 100%;
+            }  
+        }
+    }
+    &__item{
+        border: 1px solid var(--tp-border-2);
+        padding: 40px;
+        border-radius: 15px;
+        transition: .3s;
+        @media #{$xl}{
+            padding: 30px;
+        }
+        @media #{$lg}{
+            padding: 20px;
+        }
+        @media #{$xs}{
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        &:hover{
+            background-color: var(--tp-common-white);
+            border-color: var(--tp-common-white);
+           & .tp-testimonial__icon{
+            & span{
+                box-shadow: inset 0 0 0 40px rgba(20, 23, 116, 1);
+            }
+           } 
+        }
+    }
+    &__icon{
+        margin-right: 30px;
+        position: relative;
+        @media #{$xs}{
+            margin-bottom: 15px;;
+        }
+        & span{
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+            border-radius: 50%;
+            background-color: var(--tp-common-white);
+            display: inline-block;
+            text-align: center;
+            transition: .5s;
+            position: relative;
+        }
+    }
+    &__content{
+        & p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;           
+            color: #62637D;
+            padding-bottom: 5px; 
+        }
+    }
+    &__title-sm{
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 0;
+        & span{
+            font-weight: 400;
+            font-size: 12px;
+        }
+    }
+    &__slider-item{
+        background-color: var(--tp-common-white);
+        padding: 25px 25px;
+        border-radius: 10px;
+        @media #{$xs}{
+            flex-wrap: wrap;
+        }
+    }
+    &__slider-img{
+        flex: 0 0 auto;
+        @media #{$xs}{
+            width: 100%;
+        }
+        & img{
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__slider-content{
+        padding-right: 50px;
+        padding-left: 15px;
+        @media #{$xs}{
+            padding-right: 0;
+            padding-left: 0;
+            padding-top: 30px;
+        }
+        & p{
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 1.6;           
+            letter-spacing: -0.02em;           
+            color: #62637D;
+            padding-bottom: 20px;
+            @media #{$xxxl}{
+                font-size: 18px;
+            }
+            @media #{$xl,$xs}{
+                font-size: 17px;
+            }
+        }
+    }
+    &__slider-title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.1;
+        @media #{$xxxl}{
+            font-size: 16px;
+        }
+        @media #{$xl}{
+            font-size: 14px;
+        }
+        @media #{$xs}{
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    }
+    &__slider-quote{
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        background-color: var(--tp-theme-1);
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        top: -30px;
+        left: 35px;
+        color: var(--tp-common-white);
+        font-size: 20px;
+    }
+    &__active{
+        margin: 0px -130px;
+        @media #{$xxxl}{
+            margin: 0px -150px;
+        }
+        @media #{$xxl,$xl,$lg,$md,$xs}{
+            margin:0;
+        }
+        & .slick-slide {
+            padding: 0px 15px;
+            padding-top: 30px;
+            @media #{$xs}{
+                padding: 0px;
+                padding-top: 30px;
+            }
+        }
+    }
+}
+
+.tp-testimonial-3{
+    &__shape-3-1{
+        position: absolute;
+        top: 22%;
+        left: 0%;
+        z-index: -1;
+    }
+    &__shape-3-2{
+        position: absolute;
+        top: 22%;
+        right: 0%;
+        z-index: -1;
+    }
+    &__wrapper{
+        padding-right: 50px;
+        padding-left: 50px;
+        @media #{$xl,$lg,$md,$xs}{
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    &__section-box{
+        padding-bottom: 50px;
+    }
+    &__item{
+        border: 1px solid #DCEDF9;
+        border-radius: 15px;
+        padding: 50px 30px;
+        background-color: var(--tp-common-white);
+        @media #{$lg}{
+            padding: 30px 20px;
+        }
+        @media #{$xs}{
+            flex-wrap: wrap;
+            padding: 30px 20px;
+        }
+    }
+    &__icon{
+        flex: 0 0 auto;
+        margin-right: 30px;
+        width: 75px;
+        height: 75px;
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        & img{
+            border-radius: 50%;
+            box-shadow: 0px 10px 23px #EEF1F9;
+        }
+    }
+    &__content{
+        & p{
+            font-weight: 400;
+            font-size: 16px;        
+            color: #62637D;
+            padding-right: 30px;
+            margin-bottom: 60px;
+            @media #{$xs}{
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__author{
+        & h4{
+            font-weight: 600;
+            font-size: 16px;
+            & span{
+                font-weight: 400;
+                font-size: 12px;
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+    &__item-2{
+        padding: 30px;
+        @media #{$lg}{
+            padding: 20px;
+        }
+        & .tp-testimonial-3__content{
+            & p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

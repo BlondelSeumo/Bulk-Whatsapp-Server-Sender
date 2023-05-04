@@ -1,0 +1,455 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  21. contact CSS START
+/*----------------------------------------*/
+
+.tp-account {
+    &__wrapper {
+        padding-right: 70px;
+
+        @media #{$md} {
+            padding-right: 0;
+            margin-bottom: 70px;
+        }
+
+        @media #{$xs} {
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__section-box {
+        & .tp-section-title-sm {
+            @media #{$xs} {
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    &__section-box {
+        & p {
+            color: #667685;
+            font-size: 18px;
+            padding-bottom: 30px;
+
+            @media #{$lg} {
+                & br {
+                    display: none;
+                }
+            }
+
+            @media #{$xs} {
+                font-size: 16px;
+
+                & br {
+                    display: none;
+                }
+            }
+        }
+
+        & span {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 32px;
+            color: #1D1D1F;
+            margin-bottom: 5px;
+            display: inline-block;
+
+            @media #{$xs} {
+                font-size: 17px;
+            }
+
+        }
+    }
+
+    &__form {
+        margin-bottom: 70px;
+
+        @media #{$lg} {
+            margin-bottom: 50px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 40px;
+        }
+
+        & button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #000000;
+            & i{
+                margin-left: 5px;
+            }
+            @media #{$xs} {
+                margin-top: 30px;
+                position: static;
+            }
+        }
+    }
+
+    &__input {
+        & input {
+            border: 0;
+            font-weight: 400;
+            font-size: 18px;
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #000000;
+            padding-right: 100px;
+
+            @media #{$xs} {
+                font-size: 15px;
+                padding-right: 0px;
+                padding-bottom: 10px;
+            }
+
+            @include tp-placeholder {
+                color: #000000;
+            }
+        }
+    }
+
+    &__app-download {
+        & span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 32px;
+            color: #667685;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    }
+
+    &__sm-img-1 {
+        position: absolute;
+        top: -30%;
+        left: 0;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+        border-radius: 10px;
+        animation: tpleftright 1s infinite alternate;
+
+        @media #{$md} {
+            top: 0%;
+        }
+    }
+
+    &__sm-img-2 {
+        position: absolute;
+        bottom: -30%;
+        right: 0;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+        border-radius: 10px;
+        animation: tpupdown 1s infinite alternate;
+    }
+}
+
+.contact-title {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 45px;
+
+    @media #{$xs} {
+        font-size: 31px;
+    }
+}
+
+.tp-contact-input {
+    & input {
+        width: 100%;
+        height: 60px;
+        font-size: 15px;
+        color: var(--tp-theme-1);
+        border: 1px solid transparent;
+        background-color: var(--tp-grey-2);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        padding: 0px 20px;
+
+        &:focus {
+            border: 1px solid var(--tp-theme-2);
+        }
+
+        &::placeholder {
+            color: rgba(116, 116, 116, .50);
+        }
+    }
+
+    & textarea {
+        width: 100%;
+        height: 170px;
+        resize: none;
+        background-color: var(--tp-grey-2);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: var(--tp-theme-1);
+        padding: 20px;
+
+        &:focus {
+            border: 1px solid var(--tp-theme-2);
+        }
+
+        &::placeholder {
+            color: rgba(116, 116, 116, .50);
+        }
+    }
+}
+
+.contact-info {
+    border: 1px solid var(--tp-grey-2);
+    padding: 40px;
+    border-radius: 10px;
+
+    @media #{$md} {
+        padding: 30px 20px;
+    }
+
+    & .contact-icon {
+        height: 60px;
+        width: 60px;
+        border: 1px solid var(--tp-grey-2);
+        text-align: center;
+        line-height: 60px;
+        color: var(--tp-theme-2);
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    & h4 {
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: -0.01em;
+        padding-bottom: 10px;
+
+        & a {
+            background-image: linear-gradient(#141774, #141774), linear-gradient(#141774, #141774);
+            display: inline;
+            background-size: 0% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.3s linear;
+
+            &:hover {
+                background-size: 0% 1px, 100% 1px;
+            }
+        }
+    }
+
+    & span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+
+        @media #{$md} {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}
+
+.tp-login-title {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--tp-theme-1);
+    padding-bottom: 30px;
+
+    @media #{$xs} {
+        font-size: 30px;
+    }
+}
+
+.tp-login-thumb {
+    @media #{$xs,$md} {
+        margin-bottom: 70px;
+    }
+    & img {
+        max-width: 100%;
+    }
+}
+
+.tplogin {
+    width: 420px;
+    &__form {
+        @media #{$xs} {
+            margin-bottom: 40px;
+        }
+        & .tp-mail {
+            margin-bottom: 15px;
+
+            & label {
+                color: var(--tp-theme-1);
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            & input {
+                height: 60px;
+                width: 100%;
+                background-color: var(--tp-grey-2);
+                border: 1px solid transparent;
+                border-radius: 10px;
+                padding: 0px 20px;
+                color: var(--tp-theme-1);
+
+                &:focus {
+                    border: 1px solid var(--tp-theme-2);
+                }
+
+                &::placeholder {
+                    font-weight: 400;
+                    color: #B2B0C1;
+                }
+            }
+        }
+
+        & .tp-password {
+            padding-bottom: 30px;
+
+            & label {
+                color: var(--tp-theme-1);
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            & input {
+                width: 100%;
+                height: 60px;
+                background-color: var(--tp-grey-2);
+                border: 1px solid transparent;
+                border-radius: 10px;
+                padding: 0px 20px;
+                color: var(--tp-theme-1);
+                &:focus {
+                    border: 1px solid var(--tp-theme-2);
+                }
+                &::placeholder {
+                    font-weight: 400;
+                    color: #B2B0C1;
+                }
+            }
+
+            & .tp-number {
+                padding-bottom: 10px;
+
+                & label {
+                    color: var(--tp-common-black);
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+
+                & input {
+                    width: 100%;
+                    height: 60px;
+                    background-color: var(--tp-grey-1);
+                    border: 0;
+                    border-radius: 5px;
+                    padding: 0px 20px;
+                    color: #B2B0C1;
+
+                    &::placeholder {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #B2B0C1;
+                    }
+                }
+            }
+
+            & .tp-forgot-password {
+                margin-bottom: 40px;
+
+                & .checkbox {
+                    & label {
+                        color: var(--tp-common-black);
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+
+                & .forgot {
+                    & a {
+                        color: #007AFF;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            & .tp-signup {
+                margin-top: 20px;
+
+                & .account {
+                    & a {
+                        color: var(--tp-common-black);
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+
+                & .signin {
+                    & a {
+                        color: #007AFF;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    & .tp-forgot-password{
+        margin-bottom: 40px;
+        & .checkbox{
+            & label{
+                color: var(--tp-theme-1);
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        & .forgot{
+            & a{
+                color: #007AFF;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+    & .tp-signup{
+        margin-top: 20px;
+        & .account{
+            & a{
+                color: var(--tp-theme-1);
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        & .signin{
+            & a{
+                color: #007AFF;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+    .tp-login-wrapper {
+        @media #{$xs} {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }

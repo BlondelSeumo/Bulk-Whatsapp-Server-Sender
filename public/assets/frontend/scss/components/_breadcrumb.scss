@@ -1,0 +1,104 @@
+@use '../utils' as *;
+
+
+.breadcrumb-height{
+    padding-top: 200px;
+    padding-bottom: 190px;
+    @media #{$xs} {
+        padding-top: 150px;
+        padding-bottom: 120px;
+        background-position: left;
+    }
+}
+
+.breadcrumb{
+    &__scroll-bottom{
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translate(-50%);
+        & a{
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 20px;
+            border-radius: 50%;
+            background-color: var(--tp-common-white);
+            color: var(--tp-theme-1);
+            position: relative;
+            display: inline-block;
+            &::after{
+                height: 25px;
+                width: 25px;
+                background-color: var(--tp-common-white);
+                border-radius: 50%;
+                content: '';
+                position: absolute;
+                right: -15px;
+                top: 20px;
+            }
+            &::before{
+                height: 25px;
+                width: 25px;
+                background-color: var(--tp-common-white);
+                border-radius: 50%;
+                content: '';
+                position: absolute;
+                left: -15px;
+                top: 20px;
+            }
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 65px;
+        line-height: 1.1; 
+        color: var(--tp-theme-1); 
+        padding-bottom: 15px;            
+        @media #{$md} {
+            font-size: 50px;
+         }
+        @media #{$xs} {
+            font-size: 35px;
+            margin-bottom: 0;
+        }
+    }
+    &__list{
+        display: inline-block;
+        padding: 0px 10px;
+        & span{
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 19px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--tp-theme-1);            
+            &.dvdr{
+                & i{
+                    font-size: 18px;
+                    padding: 0px 5px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &__subtitle{
+        font-size: 18px;
+        font-weight: 300;
+        color: var(--tp-common-black);
+        text-transform: uppercase;
+        @media #{$xs} {
+            font-size: 15px;
+        }
+    }
+}
+.breadcrumb__area {
+    background-size: cover;
+    background-position: center;
+    @media #{$lg,$md,$xs} {
+        background-position: right;
+    }
+}
+
+

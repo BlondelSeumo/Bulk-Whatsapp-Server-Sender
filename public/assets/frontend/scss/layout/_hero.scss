@@ -1,0 +1,347 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. hero CSS START
+/*----------------------------------------*/
+
+.tp-hero {
+    &__bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 190px;
+        padding-bottom: 30px;
+    }
+    &__bg-2{
+        padding-top: 170px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 64px;
+        color: var(--tp-common-white);
+        line-height: 1.2;
+        @media #{$xl}{
+            font-size: 60px;
+        }
+        @media #{$lg}{
+            font-size: 55px;
+        }
+        @media #{$md}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 38px;
+        }
+    }
+    &__title-lg {
+        font-weight: 600;
+        font-size: 70px;
+        color: var(--tp-common-white);
+        line-height: 1.2;
+        &.theme-color{
+            color: var(--tp-theme-1);
+        }
+        & span{
+            color: var(--tp-theme-2);
+            position: relative;
+            &::before{
+                position: absolute;
+                bottom: 9px;
+                left: 0;
+                content: '';
+                height: 5px;
+                width: 100%;
+                background-color: var(--tp-theme-2);
+                display: inline-block;
+                animation: section-animation 4s infinite;
+            }
+        }
+        @media #{$xl}{
+            font-size: 60px;
+        }
+        @media #{$lg}{
+            font-size: 55px;
+        }
+        @media #{$md}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 37px;
+        }
+    }
+    &__thumb {
+        &-icon {
+            & span {
+                height: 80px;
+                width: 80px;
+                line-height: 80px;
+                text-align: center;
+                background-color: var(--tp-common-white);
+                box-shadow: 0px 21px 89px rgba(4, 22, 49, 0.24);
+                border-radius: 50%;
+                display: inline-block;
+
+                &.hero-icon {
+                    &-1 {
+                        position: absolute;
+                        top: 50%;
+                        left: 150px;
+                        @media #{$lg}{
+                            left: 225px;
+                        }
+                    }
+
+                    &-2 {
+                        position: absolute;
+                        top: 47%;
+                        right: 80px;
+                        @media #{$lg}{
+                            right: 160px;
+                        }
+                        @media #{$md}{
+                            right: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__contact{
+        & a{
+            font-weight: 400;
+            font-size: 16px;
+            & b{
+                color: var(--tp-theme-1);
+                transition: .3s;
+                &:hover{
+                    color: var(--tp-common-sky);
+                }
+            }
+        }
+    }
+    &__img-1{
+        position: absolute;
+        top: 16%;
+        left: -28%;
+        animation: tpupdown 1s infinite alternate;
+        @media #{$lg}{
+            left: 0;
+        }
+    }
+    &__img-2{
+        position: absolute;
+        top: 25%;
+        right: -24%;
+        animation: tpleftright 1s infinite alternate;
+        @media #{$xl}{
+            right: -30%;
+        }
+        @media #{$lg}{
+            top: 60%;
+            right: 0px;
+        }
+    }
+    &__wrapper-3{
+        margin-right: -80px;
+        @media #{$xl,$lg}{
+            margin-right: 0;
+        }
+        @media #{$md,$xs}{
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+    &__content-box{
+        & p{
+            padding-bottom: 25px;
+        }
+    }
+    &__social{
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+        bottom: 19%;
+        right: 5%;
+        overflow: hidden;
+        padding-left: 120px;
+        & a{
+            height: 40px;
+            width: 40px;
+            border: 1px solid #EAB6CC;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: var(--tp-theme-1);
+            margin-top: 7px;
+            &:hover{
+               & .social-icon{
+                left: -70px;
+                opacity: 1;
+                visibility: visible;
+               } 
+               & .social-icon{
+                &.facebook{
+                    left: -81px;
+                }
+                &.instagram{
+                    left: -88px;
+                }
+                &.dribbble{
+                    left: -80px;
+                }
+               } 
+            }
+        }
+        & .social-icon{
+            position: absolute;
+            top: -1px;
+            left: -35px;
+            padding: 12px 20px;
+            background-color: var(--tp-common-white);
+            border-radius: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+            & span{
+                display: flex;
+                flex-direction: row;
+                line-height: 0;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: capitalize;
+                & i{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &__thumb-3{
+        height: 490px;
+        width: 490px;
+        position: relative;
+        animation: tpupdown 1s infinite alternate;
+        @media #{$lg}{
+            height: 450px;
+            width: 450px;  
+        }
+        @media #{$md}{
+            margin-top: 80px; 
+            height: 100%;
+            width: 100%; 
+        }
+        @media #{$xs}{
+            margin-top: 60px; 
+            height: 100%;
+            width: 100%; 
+        }
+        & img{
+            border-radius: 50%;
+            @media #{$md,$xs}{
+                width: 100%; 
+            }
+        }
+        &::after{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: '';
+            top: 0;
+            left: 0;
+            border: 1px dashed var(--tp-theme-2);
+            border-radius: 50%;
+            transform: scale(1.1);
+        }
+    }
+    &__thumb-shape-1{
+        position: absolute;
+        top: 25px;
+        right: 10px;
+        z-index: -1;
+    }
+    &__thumb-shape-2{
+        position: absolute;
+        bottom: 25px;
+        left: 10px;
+        z-index: -1;
+    }
+    &__content-box{
+        & p{
+            @media #{$xs}{
+                font-size: 16px;
+            }  
+        }
+    }
+    &__shape-3-1{
+        position: absolute;
+        top: 35%;
+        left: 0%;
+        z-index: -1;
+    }
+    &__shape-3-2{
+        position: absolute;
+        top: 35%;
+        right: 0%;
+        z-index: -1;
+    }
+}
+
+.tp-header-bg{
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+    @media #{$lg,$md,$xs}{
+        top: 0px;
+    }
+}
+.scroll-dots{
+    position: absolute;
+    left: 0;
+    bottom: 14%;
+    animation: tpupdown .6s infinite alternate;
+    @media #{$xl}{
+        bottom: 22%;
+    }
+    & .circle{
+        &-1,
+        &-2,
+        &-3{
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        &-1{
+            height: 15px;
+            width: 15px;
+            background-color: rgba($color: #fff, $alpha: .1);
+        }
+
+        &-2{
+            height: 9px;
+            width: 9px;
+            background-color: rgba($color: #fff, $alpha: .4);
+        }
+
+        &-3{
+            height: 5px;
+            width: 5px;
+            background-color: rgba($color: #fff, $alpha: 1);
+        }
+    }
+    & .rotate-text {
+        transform: rotate(90deg);
+        margin-bottom: 100px;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.55em;
+        text-transform: uppercase;     
+        color: #7C7EB1;
+    }
+    & .scroll-mouse{
+        color: var(--tp-common-white);
+        font-size: 35px;
+        transform: rotate(180deg);
+    }
+}

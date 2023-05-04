@@ -1,0 +1,30 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. brand CSS START
+/*----------------------------------------*/
+
+.tp-brand{
+    &__space{
+        @media #{$md} {
+            padding-bottom: 120px;
+        }
+        @media #{$xs} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    &__item{
+        text-align: center;
+    }
+}
+.tp-barnd__active{
+    & .slick-slide img {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,155 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  17. price CSS START
+/*----------------------------------------*/
+
+.tp-price{
+    &__item{
+        background-color: var(--tp-common-white);
+        padding: 60px 45px;
+        border-radius: 10px;
+        margin: 0 0 -1px 0px;
+        @media #{$lg}{
+            padding: 40px 20px;
+        }
+        @media #{$xs}{
+            padding: 30px;
+        }
+        &:hover{
+          & .tp-price__icon{
+            & span{
+                &.icon{
+                    animation: icon-bounce 0.8s 1;
+                }
+            }
+          }  
+        }
+    }
+    &__active{
+        border: 2px solid var(--tp-common-sky);
+        box-shadow: 0px 31px 39px rgba(32, 70, 94, 0.1);
+        & .tp-btn-border{
+            background-color: var(--tp-common-sky);
+            color: var(--tp-common-white);
+        }
+    }
+    &__border{
+        & .tp-price__item{
+            border: 1px solid #F1F1F1;
+        }
+        & .tp-price__active{
+            border: 2px solid var(--tp-common-sky);
+            box-shadow: 0px 31px 39px rgba(32, 70, 94, 0.1);
+            & .tp-btn-border{
+                background-color: var(--tp-common-sky);
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &__title{
+        font-size: 30px;
+        padding-bottom: 50px;
+        @media #{$lg} {
+            padding-bottom: 30px;
+            font-size: 25px;
+        }
+        @media #{$xs}{
+            padding-bottom:30px;
+        }
+    }
+    &__icon{
+        margin-bottom: 60px;
+        @media #{$lg} {
+            margin-bottom: 40px;
+        }
+        @media #{$xs}{
+            margin-bottom:30px;
+        }
+        & span{
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #62637D;
+            @media #{$xs}{
+                font-size: 13px;
+            }
+            &.icon{
+                height: 57px;
+                width: 57px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 57px;
+                background-color: var(--tp-common-pink);
+                display: inline-block;
+                color: var(--tp-common-white);
+                font-size: 18px;
+            }
+            &.price-color-2{
+                background-color: var(--tp-common-sky);
+            }
+            &.price-color-3{
+                background-color: var(--tp-common-yellow);
+            }
+        }
+    }
+    &__btn{
+        line-height: 0;
+        & .tp-btn-border{
+            width: 100%;
+        }
+    }
+    &__list{
+        margin-bottom: 70px;
+        @media #{$lg} {
+            margin-bottom: 50px;
+        }
+        @media #{$xs} {
+            margin-bottom: 45px;
+        }
+        & ul{
+            & li{
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &::before{
+                    content: '';
+                    height: 13px;
+                    width: 13px;
+                    border-radius: 50%;
+                    background-color: var(--tp-common-yellow);
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                }
+                &.color-sky{
+                    &::before{
+                        background-color: var(--tp-common-sky);
+                    }
+                }
+                &.color-pink{
+                    &::before{
+                        background-color: var(--tp-common-pink);
+                    }
+                }
+                &.color-theme{
+                    &::before{
+                        background-color: var(--tp-theme-2);
+                    }
+                }
+                a{
+                    font-weight: 400;
+                    font-size: 18px;                  
+                    color: #62637D;
+                    @media #{$lg} {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
